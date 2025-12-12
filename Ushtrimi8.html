@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+      <title id="Titulli1">Titulli 1</title>
+    <title id="Titulli2">Titulli 2</title>
+     <title id="Titulli3">Titulli 3</title>
+</head>
+<body>
+    <p id="pragrafi">Teskti i vieter</p>
+    <script>
+        document.getElementById("pragrafi").innerText="Peshednetie student"
+    </script>
+     <br>
+
+    <button id="button">Kliko</button>
+    <br>
+    <script>
+        document.getElementById("button").style.backgroundColor="red"
+    </script>
+    <br>
+
+    <div id="div" style="width: 150px;">
+        Ky eshte divi par
+    </div>
+    <script>
+        document.getElementById("div").style.border= "solid 2px"
+        
+    </script>
+  
+     <script>
+        document.getElementById("Titulli1").textContent="Ndrysho titullin";
+     </script>
+
+     <div id="pragrafet">
+        <p>Paragrafi1</p>
+        <p>Paragrafi2</p>
+        <p>Paragrafi3</p>
+     </div>
+     <script>
+        document.getElementById("pragrafet").style.color="green"
+     </script>
+
+     <p>Paragrafi 4</p>
+     <p>Paragrafi 5</p>
+     <p>Paragrafi 5</p>
+
+      <h2 id="h2">Rezultati</h2>
+     <script>
+        let paragrafet =document.getElementsByTagName("p")
+        let numritotal = paragrafet.length;
+        document.getElementById("h2").textContent="Numri total i paragrafeve  " +numritotal
+     </script>
+
+     <ul class="item">
+        <li>Elementi 1</li>
+        <li>Elementi 2</li>
+        <li>Elementi 3</li>
+     </ul>
+
+     <script>
+            document.querySelectorAll(".item li").forEach((li, i)=> li.style.color = ["red" , "green" , "blue"] [i]);
+     </script>
+
+
+</body>
+</html>
