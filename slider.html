@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+</head>
+<body style="background-color: white">
+    <div class="slider" style="display: flex; justify-content: center; align-items: center; height: 80vh; ">
+        <div class="slides">
+            <img src="Instagram-social-media-Logo-500x281.png" alt="Image 1"  >
+            <img src="whatsapp-icon-logo-png_seeklogo-305567.png" alt="Image 2" style="display: none;"  >
+        </div>
+    </div>
+    <button  onclick="previmg()"  style="margin-left: 650px; background-color: plum;" >Previous</button>
+    <button onclick="nextimg()" style="background-color: green;">Next</button>
+
+    <script>
+        let Image =[
+            "Instagram-social-media-Logo-500x281.png",
+            "whatsapp-icon-logo-png_seeklogo-305567.png"
+        ];
+        let currentIndex =0;
+        function nextimg(){
+            currentIndex = (currentIndex + 1) % Image.length;
+            document.querySelector(".slides img").src = Image[currentIndex];
+        }
+
+        function previmg() {
+         currentIndex = (currentIndex - 1 + Image.length) % Image.length;
+         document.querySelector(".slides img").src = Image[currentIndex];  
+        } 
+        
+    </script>
+</body>
+</html>
